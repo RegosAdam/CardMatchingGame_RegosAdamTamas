@@ -1,0 +1,14 @@
+<!-- <p>Time:</p> -->
+<h3>Steps: {{deck.moveCounter}}</h3>
+<div class="cardContainer">
+  <table *ngIf="!deck.gameWon">
+    <tr *ngFor="let row of cutDeck">
+      <td *ngFor="let image of row" >
+        <img *ngIf="deck.getFlipValueById(image.id) && (image.imgURL)" [attr.id]="image.id" class="front" src="{{image.imgURL}}" (click)="deck.flipACardById(image.id)">
+        <img *ngIf="!(deck.getFlipValueById(image.id)) && (image.imgURL)" [attr.id]="image.id + '-bg'" class="back" src="{{backgroundImageUrl}}" (click)="deck.flipACardById(image.id)">
+        <h1 *ngIf="!(image.imgURL)" class="found">✔</h1>
+      </td>
+    </tr>
+  </table>
+</div>
+<h1 *ngIf="deck.gameWon" (click)="restart()">You won</h1>
