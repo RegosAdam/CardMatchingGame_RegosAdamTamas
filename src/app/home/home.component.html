@@ -1,14 +1,22 @@
-<div class="rules">
-  <h1>Rules:</h1>
-  <p>asdélfjaésdlfjaéslkdjfasdfkjaséldfjéalsdfjdlékf 
-    <br> asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfas
-    <br> asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfas
-    <br> asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfas
-    <br> asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfas
-    <br> asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfas
-    <br> asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfas
-  </p>
-  <a href="/game">Start the game</a>
-  <p>Kártyák száma:</p>
-  <input type="number" placeholder="3 db - 10 db" min="3" max="10">
+<div class="page">
+  <div class="rules">
+    <h1>Rules:</h1>
+    <p class="rule-text">
+      The game starts with all the cards face down and then the player take turns to turn over two cards.
+      When two cards are revealed:
+    </p>
+    <ul class="rule-text">
+      <li>If the cards are identical, remove them from play.</li>
+      <li>If they are not, flip them back.</li>
+      <li>The game ends when all the cards are removed.</li>
+    </ul>
+    <div class="container">
+      
+      <form>
+        <label>Number of pairs:</label>
+        <input type="number" id="pairCount" name="pairCount" value="6" placeholder="3 - 10" min="3" max="10">
+        <a href="/game">Start the game</a>
+      </form>
+    </div>
+  </div>
 </div>

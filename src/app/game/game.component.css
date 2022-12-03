@@ -1,7 +1,15 @@
 .cardContainer {
-  border: 1px green solid;
-  margin: 50px 150px;
+  margin: 30px 150px;
   padding: 20px;
+}
+
+h3{
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 0px;
+  color: rgb(79, 223, 79);
+  text-shadow: 2px 2px 10px #21251f, 2px 2px 15px #000000;
+  
 }
 
 table {
@@ -14,18 +22,52 @@ td {
 }
 
 .found {
-  width: 400px;
-  height: 400px;
-  padding: 190px 190px;
-  margin: 0;
+  width: 200px;
+  height: 200px;
+  margin: 10px;
   user-select: none;
-  
-}
-/* 
-.front {
-  display: block;
 }
 
-.back {
-  display: none;
-} */
+img{
+  width: 200px;
+  height: 200px;
+  border-radius: 15px;
+  border: 8px green solid;
+  box-shadow: 3px 3px 10px #3a3a3a;
+  margin: 10px;
+}
+
+.won p{
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 0px;
+  color: rgb(10, 134, 10);
+  text-shadow: 2px 2px 8px #000000;
+  padding-top: 80px;
+  margin-bottom: 60px;
+}
+
+.won{
+  text-align: center;
+  margin-top: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(195, 247, 161);
+  width: 600px;
+  height: 350px;
+  border-radius: 25px;
+  background-color: rgb(195, 247, 161);
+  box-shadow: 0 0 5px 10px rgb(195, 247, 161), 0 0 10px 15px rgb(195, 247, 161);
+}
+
+.button{
+  margin: 20px 30px;
+  text-decoration: none;
+  color: rgb(10, 134, 10);
+  text-shadow: 1px 1px 4px #00000098;
+  box-shadow: 1px 1px 4px #00000098;
+  border: 3px solid rgb(10, 134, 10);
+  padding: 5px 15px;
+  border-radius: 5px;
+  font-size: 20px;
+}

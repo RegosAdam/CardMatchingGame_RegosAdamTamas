@@ -6,4 +6,17 @@
 
 body {
   margin: 0;
+  font-style: Comic Sans MS, Comic Sans, cursive;
+}
+
+.home-bg-img{
+    background-image: url('assets/images/bg3.jpg');
+    background-repeat: no-repeat; 
+    background-size: cover;
+}
+
+.game-bg-img {
+    background-image: url('assets/images/bg5.jpg');
+    background-repeat: no-repeat; 
+    background-size: cover;
 }

@@ -1,4 +1,5 @@
 import { Deck } from './../service/Deck';
+import { HomeComponent } from '../home/home.component';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GameComponent implements OnInit {
 
-  pairCount: number = 6
+  pairCount: number = 10
   deck: Deck
   cutDeck: any
   shuffledDeck: any
@@ -27,5 +28,7 @@ export class GameComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    document.body.classList.add('game-bg-img')
+    document.body.classList.remove('home-gbg-img')
   }
 }
