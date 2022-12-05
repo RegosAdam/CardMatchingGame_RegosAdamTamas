@@ -1,11 +1,12 @@
-<!-- <p>Time:</p> -->
 <h3>Moves: {{game.totalMoves}}</h3>
 <div class="cardContainer">
   <table *ngIf="!game.gameWon">
     <tr *ngFor="let row of cutDeck">
-      <td *ngFor="let card of row" >
-        <img *ngIf="game.getFlipValueById(card.id) && (card.imgURL)" [attr.id]="card.id" class="front" src="{{card.imgURL}}" (click)="game.flipCard(card.id)">
-        <img *ngIf="!(game.getFlipValueById(card.id)) && (card.imgURL)" [attr.id]="card.id + '-bg'" class="back" src="{{backgroundImageUrl}}" (click)="game.flipCard(card.id)">
+      <td *ngFor="let card of row">
+        <img *ngIf="game.getFlipValueById(card.id) && (card.imgURL)" [attr.id]="card.id" class="front"
+          src="{{card.imgURL}}" (click)="game.flipCard(card.id)">
+        <img *ngIf="!(game.getFlipValueById(card.id)) && (card.imgURL)" [attr.id]="card.id + '-bg'" class="back"
+          src="{{backgroundImageUrl}}" (click)="game.flipCard(card.id)">
         <h1 *ngIf="!(card.imgURL)" class="found"></h1>
       </td>
     </tr>

@@ -17,9 +17,9 @@ export class GameComponent implements OnInit {
     let homeComponent = new HomeComponent()
     this.game = homeComponent.getGame()
     this.cutDeck = this.game.cutDeckToRows(this.game.getPairCount())
-   }
+  }
 
-   restart(){
+  restart() {
     this.game.startGame()
     this.cutDeck = this.game.cutDeckToRows(this.game.getPairCount())
   }

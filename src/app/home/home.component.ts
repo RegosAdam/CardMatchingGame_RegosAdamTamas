@@ -10,12 +10,12 @@ import { FormBuilder } from '@angular/forms';
 export class HomeComponent implements OnInit {
 
   game: GameService
-  
-  constructor() {
-     this.game = new GameService()
-     }
 
-  getGame(){
+  constructor() {
+    this.game = new GameService()
+  }
+
+  getGame() {
     return this.game
   }
 
