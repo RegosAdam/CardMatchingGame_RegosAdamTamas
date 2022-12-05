@@ -1,17 +1,17 @@
 <!-- <p>Time:</p> -->
-<h3>Moves: {{deck.moveCounter}}</h3>
+<h3>Moves: {{game.totalMoves}}</h3>
 <div class="cardContainer">
-  <table *ngIf="!deck.gameWon">
+  <table *ngIf="!game.gameWon">
     <tr *ngFor="let row of cutDeck">
-      <td *ngFor="let image of row" >
-        <img *ngIf="deck.getFlipValueById(image.id) && (image.imgURL)" [attr.id]="image.id" class="front" src="{{image.imgURL}}" (click)="deck.flipACardById(image.id)">
-        <img *ngIf="!(deck.getFlipValueById(image.id)) && (image.imgURL)" [attr.id]="image.id + '-bg'" class="back" src="{{backgroundImageUrl}}" (click)="deck.flipACardById(image.id)">
-        <h1 *ngIf="!(image.imgURL)" class="found"></h1>
+      <td *ngFor="let card of row" >
+        <img *ngIf="game.getFlipValueById(card.id) && (card.imgURL)" [attr.id]="card.id" class="front" src="{{card.imgURL}}" (click)="game.flipCard(card.id)">
+        <img *ngIf="!(game.getFlipValueById(card.id)) && (card.imgURL)" [attr.id]="card.id + '-bg'" class="back" src="{{backgroundImageUrl}}" (click)="game.flipCard(card.id)">
+        <h1 *ngIf="!(card.imgURL)" class="found"></h1>
       </td>
     </tr>
   </table>
 </div>
-<div class="won" *ngIf="deck.gameWon">
+<div class="won" *ngIf="game.gameWon">
   <p>Congratulations, You Won!</p>
   <a class="button restart" (click)="restart()">Restart</a>
   <a class="button home" href="/home">Back to Home</a>

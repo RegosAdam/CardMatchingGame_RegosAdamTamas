@@ -1,5 +1,4 @@
-import { Deck } from './../service/Deck';
-import { HomeComponent } from '../home/home.component';
+import { HomeComponent } from './../home/home.component';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -9,22 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GameComponent implements OnInit {
 
-  pairCount: number = 10
-  deck: Deck
+  game: any
   cutDeck: any
   shuffledDeck: any
   backgroundImageUrl = "assets/images/Background.png"
 
   constructor() {
-    this.deck = new Deck(this.pairCount)
-    this.shuffledDeck = this.deck
-    this.cutDeck = this.deck.cutDeckToRows(this.pairCount)
+    let homeComponent = new HomeComponent()
+    this.game = homeComponent.getGame()
+    this.cutDeck = this.game.cutDeckToRows(this.game.getPairCount())
    }
 
    restart(){
-    this.deck = new Deck(this.pairCount)
-    this.shuffledDeck = this.deck
-    this.cutDeck = this.deck.cutDeckToRows(this.pairCount)
+    this.game.startGame()
+    this.cutDeck = this.game.cutDeckToRows(this.game.getPairCount())
   }
 
   ngOnInit(): void {
